@@ -10,11 +10,15 @@ import pygame
 from source import game
 from source.update import update
 from source.draw import draw
+from source.chimp import Chimp
 
 def init():
     pygame.mouse.set_visible(False)
+    
     game.punch_sound = pygame.mixer.Sound("resources/punch.wav")
     game.punch_sound.set_volume(0.1)
+
+    game.chimp = Chimp()
 
 def main():
     """
