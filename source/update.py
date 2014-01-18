@@ -1,6 +1,7 @@
 import pygame
 import game
 import random
+import score
 
 def update(*args):
     """
@@ -18,8 +19,10 @@ def update(*args):
                 if random.randint(0, 10) == 1:
                     game.chimp.health -= 15
                     print("Critical hit")
+                    score.total += (500 * score.multiplier) # add percent bonus in somehow
                 else:
                     game.chimp.health -= 5
                     game.punch_sound.play()
+                    score.total += (100 * score.multiplier) # ^ same
 
     return
