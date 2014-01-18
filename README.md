@@ -2,7 +2,7 @@ MONKEYPUNCH
 ===========
 
 This will bring a whole new meaning to the term "To Far"!
-	
+    
   Features
 ============
 * Advanced score system! 
@@ -12,4 +12,4 @@ This will bring a whole new meaning to the term "To Far"!
 * Import your own punchable sprite(maybe)
 
 
-	
+    
