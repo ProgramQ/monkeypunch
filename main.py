@@ -13,6 +13,11 @@ from source.draw import draw
 from source.chimp import Chimp
 
 def init():
+    game.player_name = raw_input("Enter a player name: ")
+    print("Welcome, %s" % game.player_name)
+
+    pygame.init()
+    game.screen = pygame.display.set_mode(game.window_size, pygame.DOUBLEBUF)
     pygame.mouse.set_visible(False)
     
     game.punch_sound = pygame.mixer.Sound("resources/punch.wav")
@@ -25,8 +30,6 @@ def main():
     Main game initilization code
     """
 
-    pygame.init()
-    game.screen = pygame.display.set_mode(game.window_size, pygame.DOUBLEBUF)
     keys = set()
     mouse = set()
 
