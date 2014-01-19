@@ -6,6 +6,7 @@ upgrade_percent = None # to be used with shop/upgrade system
 multiplier = 1 # for each consegutive monkey punch. Max at 30
 total = 0
 
-while True:
-	if multiplier >= 30:
-		multiplier = 30
+# These lines were preventing the game from starting - josh
+# while True:
+# 	if multiplier >= 30:
+# 		multiplier = 30

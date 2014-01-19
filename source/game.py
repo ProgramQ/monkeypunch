@@ -10,5 +10,5 @@ window_size = (1280, 720)
 # Resources path
 rpath       = "resources/"
 
-fist = Sprite("fist.bmp", (25, 25))
+fist = Sprite("fist.png", (25, 25))
 punch_sound = None
