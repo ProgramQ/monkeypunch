@@ -20,13 +20,20 @@ def update(*args):
                 if random.randint(0, 50) == 1:
                     game.chimp.set_health(-15)
                     print("Critical hit")
-                    score.total += (500 * score.multiplier) # add percent bonus in somehow
+                    score.total += (500 * score.multiplier) * score.upgrade_percent 
                     print("Score: %d" % score.total) # for debugging purposes
+                    if score.multiplier < 30: # implemented better multiplier max
+                        score.multiplier += 1
+                    print("multiplier: %d" % score.multiplier) # more debugging purposes                   
                 else:
                     game.chimp.set_health(-5)
                     game.punch_sound.play()
-                    score.total += (100 * score.multiplier) # ^ same
+                    score.total += (100 * score.multiplier) * score.upgrade_percent 
                     print("Score: %d" % score.total)
+                    if score.multiplier < 30
+                        score.multiplier += 1
+                    print("multiplier: %d" % score.multiplier)
                 time.sleep(.1)
-
+            else:
+                score.multiplier = 1
     return
