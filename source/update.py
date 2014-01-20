@@ -30,7 +30,7 @@ def update(*args):
                     game.punch_sound.play()
                     score.total += (100 * score.multiplier) * score.upgrade_percent 
                     print("Score: %d" % score.total)
-                    if score.multiplier < 30
+                    if score.multiplier < 30:
                         score.multiplier += 1
                     print("multiplier: %d" % score.multiplier)
                 time.sleep(.1)
