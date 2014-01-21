@@ -16,7 +16,7 @@ def update(*args):
     # Check for hit
     for button in args[1]:
         if button == 1:
-            game.fist.rect.y -= 15 
+            game.fist.rect.y -= 15
             if game.fist.rect.colliderect(game.chimp.sprite.rect):
                 if random.randint(0, 50) == 1:
                     game.chimp.set_health(-15)
@@ -34,7 +34,7 @@ def update(*args):
                     if score.multiplier < 30:
                         score.multiplier += 1
                     print("multiplier: %d" % score.multiplier)
-                time.sleep(.1)
+                time.sleep(.1) # Prevents multiple punches per tick
             else:
                 score.multiplier = 1
     return

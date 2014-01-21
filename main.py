@@ -18,7 +18,7 @@ def init():
     pygame.mouse.set_visible(False)
     
     game.punch_sound = pygame.mixer.Sound("resources/punch.wav")
-    game.punch_sound.set_volume(0.1)
+    # game.punch_sound.set_volume(0.5)
 
     game.chimp = Chimp()
 
