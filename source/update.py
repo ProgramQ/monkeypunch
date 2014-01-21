@@ -10,14 +10,14 @@ def update(*args):
     """
 
     # Set fist location to center around mouse location
-    game.fist.rect.x = (pygame.mouse.get_pos()[0] - game.fist.rect.width / 2)
-    game.fist.rect.y = (pygame.mouse.get_pos()[1] - game.fist.rect.height / 2)
+    game.fist.sprite.rect.x = (pygame.mouse.get_pos()[0] - game.fist.sprite.rect.width / 2)
+    game.fist.sprite.rect.y = (pygame.mouse.get_pos()[1] - game.fist.sprite.rect.height / 2)
 
     # Check for hit
     for button in args[1]:
         if button == 1:
-            game.fist.rect.y -= 15
-            if game.fist.rect.colliderect(game.chimp.sprite.rect):
+            game.fist.sprite.rect.y -= 15
+            if game.fist.sprite.rect.colliderect(game.chimp.sprite.rect):
                 if random.randint(0, 50) == 1:
                     game.chimp.set_health(-15)
                     print("Critical hit")

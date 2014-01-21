@@ -11,6 +11,7 @@ from source import game
 from source.update import update
 from source.draw import draw
 from source.chimp import Chimp
+from source.fist import Fist
 
 def init():
     pygame.init()
@@ -21,6 +22,7 @@ def init():
     # game.punch_sound.set_volume(0.5)
 
     game.chimp = Chimp()
+    game.fist = Fist()
 
 def main():
     """
