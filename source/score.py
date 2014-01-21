@@ -1,4 +1,3 @@
-from random import randint
 
 # Variables
 upgrade_percent = 1.0 # to be used with shop/upgrade system
