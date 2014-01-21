@@ -11,7 +11,6 @@
 
 ### Screenshots
 ![Screenshot 1](http://i42.tinypic.com/25znm7o.png)
-_Monkey Punch alpha_
 
 ### Installation
 Grab yourself the source code in your favorite way.
