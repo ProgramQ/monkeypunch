@@ -1,4 +1,6 @@
-<img src="http://i40.tinypic.com/icr8ft.png" width="250px" />
+<center><img src="http://i40.tinypic.com/icr8ft.png" width="250px" /></center>
+
+---
 
 ### Installation
 Grab yourself the source code in your favorite way.
