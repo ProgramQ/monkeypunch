@@ -5,7 +5,7 @@ from sprite import Sprite
 screen      = None
 
 # Window size
-window_size = (1280, 720)
+window_size = (700, 700)
 
 # Resources path
 rpath       = "resources/"
