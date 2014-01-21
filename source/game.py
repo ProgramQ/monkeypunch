@@ -2,7 +2,7 @@ import pygame
 from sprite import Sprite
 
 # Game display
-screen      = None
+screen      = None # why is this here - Brandon
 
 # Window size
 window_size = (700, 700)

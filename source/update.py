@@ -16,11 +16,12 @@ def update(*args):
     # Check for hit
     for button in args[1]:
         if button == 1:
+            game.fist.rect.y -= 15 
             if game.fist.rect.colliderect(game.chimp.sprite.rect):
                 if random.randint(0, 50) == 1:
                     game.chimp.set_health(-15)
                     print("Critical hit")
-                    score.total += (500 * score.multiplier) * score.upgrade_percent 
+                    score.total += (5 * score.multiplier) * score.upgrade_percent 
                     print("Punch Points: %d" % score.total) # for debugging purposes
                     if score.multiplier < 30: # implemented better multiplier max
                         score.multiplier += 1
@@ -28,7 +29,7 @@ def update(*args):
                 else:
                     game.chimp.set_health(-5)
                     game.punch_sound.play()
-                    score.total += (100 * score.multiplier) * score.upgrade_percent 
+                    score.total += (1 * score.multiplier) * score.upgrade_percent 
                     print("Punch Points: %d" % score.total)
                     if score.multiplier < 30:
                         score.multiplier += 1
