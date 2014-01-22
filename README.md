@@ -7,8 +7,10 @@
 * "Waste of time" - The Verge
 * "0/10" - IGN
 * "Too far, man." - Mr. Holt
-* "9.5/10" - IGN (_after_ we payed(threatened to bomb) them)
+* "9.5/10" - IGN (_after_ we payed them)
 * "The best thing since PunchMonkey!" - Sliced Bread
+* "Needs more butter!" - Puala Deen 
+* "It's why half life 3 isn't out yet" - Gabe Newell
 
 ### Screenshots
 ![Screenshot 1](http://i42.tinypic.com/25znm7o.png)
