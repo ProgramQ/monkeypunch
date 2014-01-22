@@ -20,6 +20,7 @@ def update(*args):
             if game.fist.sprite.rect.colliderect(game.chimp.sprite.rect):
                 if random.randint(0, 50) == 1:
                     game.chimp.set_health(-15)
+                    # we need a critical hit sound!
                     print("Critical hit")
                     score.total += (5 * score.multiplier) * score.upgrade_percent 
                     print("Punch Points: %d" % score.total) # for debugging purposes
