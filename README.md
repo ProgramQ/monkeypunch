@@ -1,8 +1,8 @@
-<img src="http://i40.tinypic.com/icr8ft.png" width="250px" />
+<img src="http://i42.tinypic.com/4ij5e1.png" width="250px" />
 
 ---
 
-### What the critics are saying
+## What the critics are saying
 * "This is utter garbage" - John Smith, Kotaku
 * "Waste of time" - The Verge
 * "0/10" - IGN
@@ -12,10 +12,7 @@
 * "Needs more butter!" - Puala Deen 
 * "It's why half life 3 isn't out yet" - Gabe Newell
 
-### Screenshots
-![Screenshot 1](http://i42.tinypic.com/25znm7o.png)
-
-### Installation
+## Installation
 Grab yourself the source code in your favorite way.
 ```bash
 git clone https://github.com/teamcodeforfood/monkeypunch
