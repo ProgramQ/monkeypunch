@@ -44,7 +44,7 @@ class PlayState(GameState):
                         if score.multiplier < 30:
                             score.multiplier += 1
                         print("multiplier: %d" % score.multiplier)
-                    time.sleep(.1) # Prevents multiple punches per tick
+                    pygame.time.Clock().tick(10)
                 else:
                     score.multiplier = 1
 

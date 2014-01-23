@@ -29,6 +29,9 @@ def init():
 
     game.main_font = pygame.font.Font("resources/main_font.ttf", 18)
 
+    pygame.mixer.music.load("resources/theme.ogg")
+    pygame.mixer.music.play()
+
     # Switch to the playing state
     game.current_state = PlayState()
 
