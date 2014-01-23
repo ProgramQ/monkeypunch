@@ -2,7 +2,7 @@
 # Pygame Starter Kit
 # Copyright 2014, AlveyLabs Inc
 # 
-# Version 0.2.2
+# Version 
 # 
 
 import sys
@@ -12,17 +12,22 @@ from source.update import update
 from source.draw import draw
 from source.chimp import Chimp
 from source.fist import Fist
+from source.state.gamestate import GameState
+from source.state.playstate import PlayState
 
 def init():
     pygame.init()
+
     game.screen = pygame.display.set_mode(game.window_size, pygame.DOUBLEBUF)
     pygame.mouse.set_visible(False)
     
     game.punch_sound = pygame.mixer.Sound("resources/punch.wav")
-    # game.punch_sound.set_volume(0.5)
 
     game.chimp = Chimp()
     game.fist = Fist()
+
+    # Switch to the playing state
+    game.current_state = PlayState()
 
 def main():
     """
@@ -43,9 +48,9 @@ def main():
             if event.type == pygame.KEYUP: keys.discard(event.key)
             if event.type == pygame.MOUSEBUTTONDOWN: mouse.add(event.button)
             if event.type == pygame.MOUSEBUTTONUP: mouse.discard(event.button)
-
-        update(keys, mouse)
-        draw()
+            
+        game.update_context(keys, mouse)
+        game.draw_context()
 
     return
 
