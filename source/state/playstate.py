@@ -7,6 +7,7 @@ from .. import graphics
 from .. import game
 from ..sprite import Sprite
 from gamestate import GameState
+from shopstate import ShopState
 
 class PlayState(GameState):
     def __init__(self):
@@ -49,6 +50,7 @@ class PlayState(GameState):
 
         for key in args[0]:
             if key == pygame.K_ESCAPE: sys.exit()
+            if key == pygame.K_a: game.current_state = ShopState()  # Hit "a" to enter shop
 
     def draw_hud(self):
         """
@@ -76,10 +78,8 @@ class PlayState(GameState):
         # insert logic here
         game.chimp.draw()
 
-        # Don't change these
+        # Draw the HUD
         self.draw_hud()
-        pygame.display.update()
-        pygame.display.flip()
 
     def load(self):
         pygame.display.set_caption("MONKEY PUNCH!")
