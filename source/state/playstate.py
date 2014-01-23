@@ -59,7 +59,7 @@ class PlayState(GameState):
         graphics.draw_rect((game.window_size[1], 50), (0, 0, 0), (0, 0))
 
         # Display the score
-        graphics.draw_text("Score: " + str(score.total) + " x " + str(score.multiplier), 
+        graphics.draw_text("Score: " + str(score.total) + "  Multiplier: x " + str(score.multiplier) + "  Monkeys Murdered: " + str(score.monkey_deaths), 
                           (255, 255, 255), 
                           (15, 15))
 
