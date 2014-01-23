@@ -22,9 +22,10 @@ def init():
     pygame.mouse.set_visible(False)
     
     game.punch_sound = pygame.mixer.Sound("resources/punch.wav")
-
     game.chimp = Chimp()
     game.fist = Fist()
+
+    game.main_font = pygame.font.Font("resources/main_font.ttf", 18)
 
     # Switch to the playing state
     game.current_state = PlayState()
