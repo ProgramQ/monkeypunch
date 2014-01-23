@@ -1,7 +1,5 @@
 <img src="http://i42.tinypic.com/4ij5e1.png" width="250px" />
 
----
-
 ## What the critics are saying
 * "This is utter garbage" - John Smith, Kotaku
 * "Waste of time" - The Verge
