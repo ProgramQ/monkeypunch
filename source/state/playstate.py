@@ -1,6 +1,7 @@
 import pygame
 import random
 import time
+import sys
 from .. import score
 from .. import graphics
 from .. import game
@@ -42,16 +43,28 @@ class PlayState(GameState):
                         if score.multiplier < 30:
                             score.multiplier += 1
                         print("multiplier: %d" % score.multiplier)
-                    time.sleep(.2) # Prevents multiple punches per tick
+                    time.sleep(.1) # Prevents multiple punches per tick
                 else:
                     score.multiplier = 1
+
+        for key in args[0]:
+            if key == pygame.K_ESCAPE: sys.exit()
 
     def draw_hud(self):
         """
         Draw the HUD (or anything else that needs to overlay the main stuff)
         """
         
-        graphics.draw_text("Score: " + str(score.total), (255, 255, 255), (15, 15))
+        # Background rectangle
+        graphics.draw_rect((game.window_size[1], 50), (0, 0, 0), (0, 0))
+
+        # Display the score
+        graphics.draw_text("Score: " + str(score.total) + " x " + str(score.multiplier), 
+                          (255, 255, 255), 
+                          (15, 15))
+
+        # Draw this dude on top of everything
+        game.fist.draw()
 
     def draw(self):
         """
@@ -62,7 +75,6 @@ class PlayState(GameState):
 
         # insert logic here
         game.chimp.draw()
-        game.fist.draw()
 
         # Don't change these
         self.draw_hud()
