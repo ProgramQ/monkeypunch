@@ -32,6 +32,6 @@ class ShopState(GameState):
 
     def draw(self):
         game.screen.fill((41, 128, 185))
-        self.draw_hud
+        self.draw_hud()
         game.cursor.draw()
     
