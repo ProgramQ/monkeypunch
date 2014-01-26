@@ -6,3 +6,6 @@ class Button:		# use "image" and (x,y)
 
 	def draw(self):
 		self.sprite.draw()
+
+	def clicked(self):
+		pass

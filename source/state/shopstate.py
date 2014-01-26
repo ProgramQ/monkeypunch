@@ -19,6 +19,19 @@ class ShopState(GameState):
         game.cursor.rect.x = (pygame.mouse.get_pos()[0] - game.fist.sprite.rect.width / 2)
         game.cursor.rect.y = (pygame.mouse.get_pos()[1] - game.fist.sprite.rect.height / 2)
 
+    def draw_hud(self):
+        """
+        Draw the HUD (or anything else that needs to overlay the main stuff)
+        """
+        
+        # Background rectangle
+        graphics.draw_rect((game.window_size[1], 50), (0, 0, 0), (0, 0))
+
+        # Display the score
+        graphics.draw_text("PUNCH POINT SHOP", (255, 255, 255),(15, 15))        
+
     def draw(self):
-        game.screen.fill((44, 44, 44))
+        game.screen.fill((41, 128, 185))
+        self.draw_hud
         game.cursor.draw()
+    
