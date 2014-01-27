@@ -9,6 +9,15 @@ from gamestate import GameState
 class ShopState(GameState):
     def __init__(self):
         
+        # Why are we doing this?
+        # There are much better ways to do things, such as:
+        #
+        # button = Button("text", (x, y))
+        # buttons.append(button)
+        # for b in buttons: b.draw()
+        #
+        # or something to that effect
+        
         display = [
             ["0","0","0","0","0","0","0","0"]
             ["0","0","1","0","0","0","0","0"]
