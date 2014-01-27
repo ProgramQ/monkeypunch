@@ -8,7 +8,23 @@ from gamestate import GameState
 
 class ShopState(GameState):
     def __init__(self):
-        pass
+        
+        display = [
+            ["0","0","0","0","0","0","0","0"]
+            ["0","0","1","0","0","0","0","0"]
+            ["0","0","0","0","0","0","0","0"]
+            ["0","0","0","0","0","0","0","0"]
+            ["0","0","0","0","0","0","0","0"]
+            ["0","0","0","0","0","0","0","0"]
+            ["0","0","0","0","0","0","0","0"]
+            ["0","0","0","0","0","0","0","0"]
+        ]
+
+        buttonList = []
+        for y in range(0,len(display)):
+            for x in range(0,len(display[y])):
+                buttonList.append(Sprite("base button.png",(x*96, y*96)))   
+
 
     def update(self, *args):
         """
@@ -28,7 +44,7 @@ class ShopState(GameState):
         graphics.draw_rect((game.window_size[1], 50), (0, 0, 0), (0, 0))
 
         # Display the score
-        graphics.draw_text("PUNCH POINT SHOP", (255, 255, 255),(15, 15))        
+        graphics.draw_text("PUNCH POINT SHOP     PUNCH POINTS: " + str(score.total) , (255, 255, 255),(15, 15))        
 
     def draw(self):
         game.screen.fill((41, 128, 185))
